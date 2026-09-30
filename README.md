@@ -1,4 +1,4 @@
-# Khonstash
+# Lootlatch
 
 A small Steam item watchlist. Check prices, keep your reasoning next to an item, and see what remains after fees.
 

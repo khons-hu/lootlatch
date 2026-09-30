@@ -863,14 +863,14 @@ export const messages = {
     "es": "Hasta 60 consultas guardadas. Son precios de oferta, no ventas realizadas.{}",
     "cs": "Nejvýše 60 uložených ověření. Jde o nabídkové ceny, ne uskutečněné prodeje.{}"
   },
-  "Use a Khonstash backup with at most 12 items.": {
-    "en": "Use a Khonstash backup with at most 12 items.",
-    "sk": "Použite zálohu Khonstash s najviac 12 položkami.",
-    "hu": "Legfeljebb 12 tárgyat tartalmazó Khonstash-mentést használj.",
-    "pl": "Użyj kopii Khonstash z maksymalnie 12 przedmiotami.",
-    "de": "Verwende eine Khonstash-Sicherung mit höchstens 12 Gegenständen.",
-    "es": "Usa una copia de Khonstash con hasta 12 artículos.",
-    "cs": "Použijte zálohu Khonstash s nejvýše 12 položkami."
+  "Use a Lootlatch backup with at most 12 items.": {
+    "en": "Use a Lootlatch backup with at most 12 items.",
+    "sk": "Použite zálohu Lootlatch s najviac 12 položkami.",
+    "hu": "Legfeljebb 12 tárgyat tartalmazó Lootlatch-mentést használj.",
+    "pl": "Użyj kopii Lootlatch z maksymalnie 12 przedmiotami.",
+    "de": "Verwende eine Lootlatch-Sicherung mit höchstens 12 Gegenständen.",
+    "es": "Usa una copia de Lootlatch con hasta 12 artículos.",
+    "cs": "Použijte zálohu Lootlatch s nejvýše 12 položkami."
   },
   "Use the exact Steam market name (up to 180 characters).": {
     "en": "Use the exact Steam market name (up to 180 characters).",
@@ -1061,14 +1061,14 @@ export const messages = {
     "es": "↓ En tu objetivo o por debajo",
     "cs": "↓ Na cílové ceně nebo níže"
   },
-  "Khonstash · Keep an eye on your items": {
-    "en": "Khonstash · Keep an eye on your items",
-    "sk": "Khonstash · Sledujte svoje položky",
-    "hu": "Khonstash · Kövesd a tárgyaidat",
-    "pl": "Khonstash · Obserwuj swoje przedmioty",
-    "de": "Khonstash · Behalte deine Gegenstände im Blick",
-    "es": "Khonstash · Sigue tus artículos",
-    "cs": "Khonstash · Sledujte své položky"
+  "Lootlatch · Keep an eye on your items": {
+    "en": "Lootlatch · Keep an eye on your items",
+    "sk": "Lootlatch · Sledujte svoje položky",
+    "hu": "Lootlatch · Kövesd a tárgyaidat",
+    "pl": "Lootlatch · Obserwuj swoje przedmioty",
+    "de": "Lootlatch · Behalte deine Gegenstände im Blick",
+    "es": "Lootlatch · Sigue tus artículos",
+    "cs": "Lootlatch · Sledujte své položky"
   },
   "BY KHONSU": {
     "en": "BY KHONSU",
