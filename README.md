@@ -4,7 +4,7 @@ A small Steam item watchlist. Check prices, keep your reasoning next to an item,
 
 Deployment is prepared for Vercel. The public URL will be added after deployment is verified.
 
-[Portfolio](https://khons-hu.vercel.app/)
+[Portfolio](https://khns.dev/)
 
 ## What it does
 
