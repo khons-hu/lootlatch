@@ -725,3 +725,271 @@ header { gap: 12px; flex-wrap: wrap; }
 
 /* Motion preference: System follows the OS. On and Off are explicit visitor choices. */
 .motion-control{white-space:nowrap;font-size:11px!important}.motion-off *,.motion-off *::before,.motion-off *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}@media(prefers-reduced-motion:reduce){html:not(.motion-force-on){scroll-behavior:auto}html:not(.motion-force-on) *,html:not(.motion-force-on) *::before,html:not(.motion-force-on) *::after{animation:none!important;transition:none!important}}
+
+/* ---------- Moonlit family: the current khns.dev look ----------
+   Warm paper and midnight palettes from the portfolio, sans headings under one Georgia title, sans labels,
+   pill buttons, 8px fields, 16px lit panels and a glass header. Green still means a target was met. */
+:root {
+  --bg: #e9e6df;
+  --paper: #f2efe9;
+  --surface: var(--paper);
+  --soft: #e4e0d7;
+  --wash: #e4e0d7;
+  --ink: #172430;
+  --muted: #4c5966;
+  --line: #d4cfc4;
+  --line-strong: #b3ac9e;
+  --field: #fbfaf7;
+  --raised: #f3f0ea;
+  --accent: #2b5a78;
+  --on-accent: #f7f5f0;
+  --positive: #146c54;
+  --negative: #a53a3d;
+  --rim: rgba(255, 255, 255, 0.95);
+  --glass: rgba(233, 230, 223, 0.8);
+  --lift: 0 26px 70px rgba(45, 38, 24, 0.2);
+}
+html.dark {
+  --bg: #090f16;
+  --paper: #0e1721;
+  --surface: var(--paper);
+  --soft: #142131;
+  --wash: #142131;
+  --ink: #e3e9ef;
+  --muted: #98a7b7;
+  --line: #1f2d3a;
+  --line-strong: #33485b;
+  --field: #070c12;
+  --raised: #0f1923;
+  --accent: #afcee3;
+  --on-accent: #08111a;
+  --rim: rgba(207, 227, 240, 0.1);
+  --glass: rgba(9, 15, 22, 0.74);
+  --lift: 0 30px 90px rgba(0, 0, 0, 0.55);
+}
+button,
+a,
+input,
+select,
+textarea,
+summary {
+  outline-offset: 3px;
+}
+::selection {
+  background: #52738b;
+  color: #fff;
+}
+/* Header: glass across the full width, content aligned with the page column. */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  max-width: none;
+  height: 76px;
+  padding: 0 max(30px, calc((100% - 1260px) / 2));
+  background: var(--glass);
+  border-bottom: 1px solid var(--line);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  backdrop-filter: blur(18px) saturate(1.4);
+}
+html {
+  scroll-padding-top: 96px;
+}
+.brand {
+  font-size: 26px;
+}
+.brand span {
+  font-size: 21px;
+  letter-spacing: -0.02em;
+}
+.brand small,
+.pill,
+th,
+.totals small,
+.item .game {
+  font: 500 10px/1.6 var(--sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.brand small {
+  margin-top: 2px;
+}
+th,
+.totals small {
+  font-size: 11px;
+  color: var(--muted);
+}
+.item .game {
+  letter-spacing: 0.06em;
+}
+.pill {
+  border-radius: 999px;
+  padding: 5px 11px;
+  background: var(--soft);
+  color: var(--muted);
+}
+main {
+  padding-top: 36px;
+}
+/* The opening title keeps Georgia; the moon marks the section label like the portfolio. */
+.eyebrow {
+  font: 500 11px/1.8 var(--sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.intro .eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  margin-inline-end: 11px;
+  border-radius: 50%;
+  vertical-align: -0.5px;
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--accent) 55%, transparent),
+    inset -4px 0 0 0 var(--accent);
+}
+h2 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+#detailBody > h2,
+.bottom-grid h2,
+.empty h2 {
+  font: 400 28px/1.2 var(--sans);
+  letter-spacing: -0.03em;
+}
+.read-only {
+  border-left-color: var(--line-strong);
+}
+/* Controls: pills, the accent for the main action, 8px fields. */
+button {
+  border-color: var(--line-strong);
+  border-radius: 999px;
+  padding: 9px 16px;
+}
+button:hover {
+  background: var(--soft);
+}
+.primary,
+.primary:hover,
+button.primary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+.primary:hover,
+button.primary:hover {
+  background: color-mix(in srgb, var(--accent) 84%, var(--ink));
+  border-color: color-mix(in srgb, var(--accent) 84%, var(--ink));
+}
+.trader,
+.close {
+  border-color: transparent;
+}
+.close {
+  border-radius: 50%;
+  background: var(--raised);
+}
+input,
+select,
+textarea {
+  border-color: var(--line-strong);
+  border-radius: 8px;
+  background-color: var(--field);
+}
+select,
+.language-picker select {
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 34px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) 52%,
+    calc(100% - 13px) 52%;
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.setting input,
+input[type="checkbox"],
+input[type="file"] {
+  background: none;
+  border-radius: 0;
+}
+.language-picker > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.language-picker select {
+  height: 38px;
+  min-height: 38px;
+  padding: 0 30px 0 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: 8px;
+  background-color: transparent;
+  font: 500 12px var(--sans);
+}
+.motion-control {
+  color: var(--muted);
+}
+.motion-control:hover {
+  color: var(--ink);
+}
+/* Panels, cards, tiles and dialogs: 16px corners lit along the top edge. */
+.panel,
+.item {
+  border-radius: 16px;
+  box-shadow: inset 0 1px 0 var(--rim);
+}
+.empty {
+  border-color: var(--line-strong);
+  border-radius: 16px;
+}
+.stat,
+#notice {
+  border-radius: 12px;
+}
+.note {
+  border-radius: 0 12px 12px 0;
+}
+dialog {
+  border-color: var(--line-strong);
+  border-radius: 16px;
+  background: var(--raised);
+  box-shadow:
+    var(--lift),
+    inset 0 1px 0 var(--rim);
+}
+@media (max-width: 760px) {
+  header {
+    position: static;
+    height: auto;
+    min-height: 72px;
+    padding: 12px 16px;
+  }
+  html {
+    scroll-padding-top: 0;
+  }
+  main {
+    padding-top: 12px;
+  }
+}
+
+/* Links inside footer text are underlined, like the portfolio’s inline links. */
+footer a {
+  text-decoration: underline;
+  text-decoration-color: var(--line-strong);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+footer a:hover {
+  text-decoration-color: var(--accent);
+}
