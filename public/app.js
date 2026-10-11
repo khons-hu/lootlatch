@@ -259,20 +259,19 @@ $("#calculator").onsubmit = (e) => {
   }
 };
 function themeLabel() {
-  $("#theme").setAttribute(
-    "aria-label",
-    document.documentElement.classList.contains("dark") ? t("Switch to light mode") : t("Switch to dark mode"),
-  );
+  const dark = window.AppTheme.theme === "dark";
+  const button = $("#theme");
+  const label = t(dark ? "Switch to light mode" : "Switch to dark mode");
+  button.textContent = dark ? "☀" : "☾";
+  button.setAttribute("aria-label", label);
+  button.title = label;
 }
+document.addEventListener("themechange", themeLabel);
 $("#theme").onclick = () => {
-  document.documentElement.classList.toggle("dark");
+  window.AppTheme.setPreference(window.AppTheme.theme === "dark" ? "light" : "dark");
   try {
-    localStorage.setItem(
-      "steam-shelf-theme",
-      document.documentElement.classList.contains("dark") ? "dark" : "light",
-    );
+    localStorage.setItem("steam-shelf-theme", window.AppTheme.preference);
   } catch {}
-  themeLabel();
 };
 themeLabel();
 $("#backup").onclick = () => {
